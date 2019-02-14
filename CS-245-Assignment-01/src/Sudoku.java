@@ -58,7 +58,7 @@ public class Sudoku {
 				// Set the cell back to 0 if future board cell placements don't work. This is important or else our checking won't work properly
 				board[row][col] = 0;
 			}
-			// Tertiary: Sets the number to the next sequential number. If number is 9, set to 1.
+			// ternary: Sets the number to the next sequential number. If number is 9, set to 1.
 			num = num < 9 ? num + 1 : 1;
 		}
 		return false;
@@ -86,7 +86,7 @@ public class Sudoku {
 	 */
 	private boolean checkRow(int [][] board, int num, int row, int col) {
 		for (int j = 1; j < SIZE; j++) {
-			// Tertiary: if the current index of column is less than SIZE (max index of array is SIZE - 1), then use that index; else, start over from 0
+			// ternary: if the current index of column is less than SIZE (max index of array is SIZE - 1), then use that index; else, start over from 0
 			if (board[row][col + j < SIZE ? col + j : col + j - SIZE] == num) {
 				return false;
 			}
@@ -104,7 +104,7 @@ public class Sudoku {
 	 */
 	private boolean checkCol(int [][] board, int num, int row, int col) {
 		for (int i = 1; i < SIZE; i++) {
-			// Tertiary: if the current index of row is less than SIZE (max index of array is SIZE - 1), then use that index; else, start over from 0
+			// ternary: if the current index of row is less than SIZE (max index of array is SIZE - 1), then use that index; else, start over from 0
 			if (board[row + i < SIZE ? row + i : row + i - SIZE][col] == num) {
 				return false;
 			}
