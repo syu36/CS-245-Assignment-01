@@ -65,7 +65,7 @@ public class Sudoku {
 	}
 
 	/**
-	 * Checks if the number is valid in a row and column.
+	 * Checks if the number is valid in a row, column, and square.
 	 * @param board the array that represents the sudoku board
 	 * @param num the number to place
 	 * @param row the row to place in
